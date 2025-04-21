@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container neon-glow">
+    <div class="weather-card">
+      <h1>🌦️ Weather App</h1>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city or country name" />
+        <button onclick="getWeather()">Get Weather</button>
+      </div>
+
+      <div class="unit-toggle">
+        <label for="unitToggle">Unit:</label>
+        <select id="unitToggle" onchange="updateTemperature()">
+          <option value="C" selected>°C</option>
+          <option value="F">°F</option>
+        </select>
+      </div>
+
+      <div id="weatherInfo" class="info" style="display: none;">
+        <div id="weatherIcon"></div>
+        <h2 id="temp">--</h2>
+        <p id="condition"></p>
+        <p id="emojiMode"></p>
+        <p id="humidity"></p>
+        <p id="air-quality"></p>
+        <p id="localTime"></p>
+      </div>
+
+      <div id="forecast" class="forecast"></div>
+
+      <div class="credit">Made by Shiwani Mishra 🌸</div>
+    </div>
+  </div>
+
+  <audio id="weatherMusic" autoplay loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
